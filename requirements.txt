@@ -1,0 +1,8 @@
+flask
+pandas
+requests
+beautifulsoup4
+python-dotenv
+tqdm
+openpyxl
+zipfile
