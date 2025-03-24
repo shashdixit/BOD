@@ -119,7 +119,7 @@ def process_board_members(website_url):
                 json_output = json.loads(json_string)
             except json.JSONDecodeError as e:
                 print(f"JSONDecodeError: {e}")
-                print(f"Problematic JSON string: {json_string}")
+                print(f"Problematic JSON string")
                 return None
         else:
             print("Unexpected response structure from LLM Foundry API.")
