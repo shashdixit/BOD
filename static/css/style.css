@@ -1,0 +1,115 @@
+body {
+  padding: 20px;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control-file {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.alert {
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+}
+
+.alert ul {
+  margin-bottom: 0;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.col-md-6 {
+  padding: 10px;
+}
+
+/* Additional Styling for Better Spacing and Alignment */
+.card p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.card strong {
+  color: #333;
+}
+
+.card label {
+  font-weight: bold;
+  color: #333;
+}
+
+.card input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.card input[type="file"]:hover {
+  background-color: #f1f1f1;
+}

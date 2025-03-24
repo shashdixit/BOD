@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Environment variables
+.env
+
+# Flask instance folder
+instance/
+.vscode
+
+# Flask cache files
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# macOS specific files
+.DS_Store
+
+# Pip dependency files
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+
+# Virtual environment
+venv/
+.venv/
+
+# Pytest cache
+.pytest_cache/

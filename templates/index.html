@@ -1,0 +1,92 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container">
+  <h1>Board Member Extraction Tool</h1>
+
+  {% with messages = get_flashed_messages() %} {% if messages %}
+  <div class="alert alert-warning">
+    <ul>
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %} {% endwith %}
+
+  <div class="row">
+    <!-- Model 1: Excel to CSV -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3>Model 1: Extract Board Members</h3>
+        </div>
+        <div class="card-body">
+          <p>
+            Upload an Excel file with company websites to extract board members.
+          </p>
+          <p>
+            <strong>Input:</strong> Excel file with 'Portfolio company Website'
+            column
+          </p>
+          <p><strong>Output:</strong> CSV file with board member information</p>
+
+          <form
+            action="{{ url_for('process_model1') }}"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="form-group">
+              <label for="file1">Select Excel File:</label>
+              <input
+                type="file"
+                class="form-control-file"
+                id="file1"
+                name="file"
+                accept=".xlsx,.xls"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">
+              Process and Download
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Model 2: CSV to CSVs + Log -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3>Model 2: Verify Board Members</h3>
+        </div>
+        <div class="card-body">
+          <p>Upload a CSV file with board member data to verify and enhance.</p>
+          <p><strong>Input:</strong> CSV file from Model 1</p>
+          <p>
+            <strong>Output:</strong> Enhanced CSV, feedback CSV, and log file
+          </p>
+
+          <form
+            action="{{ url_for('process_model2') }}"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="form-group">
+              <label for="file2">Select CSV File:</label>
+              <input
+                type="file"
+                class="form-control-file"
+                id="file2"
+                name="file"
+                accept=".csv"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">
+              Process and Download
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
